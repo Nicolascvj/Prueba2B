@@ -5,7 +5,7 @@ let Schema= mogoose.Schema;
 
 
 let bancoSchema=new Schema({
-    numCaja:{
+    caja:{
         type: Number,
         required:[true,'El numero de caja es requerido']
 
@@ -21,5 +21,6 @@ let bancoSchema=new Schema({
     }
 
 });
+bancoSchema.plugin(uniqueValidator,{message:'{PATH} debe ser unico'});
 
 module.exports=mogoose.model('Banco',bancoSchema);
