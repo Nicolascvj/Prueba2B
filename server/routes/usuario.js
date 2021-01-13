@@ -13,13 +13,13 @@ app.get('/banco', function (req, res) {
     let limite = req.query.limite || 5;
     limite = Number(limite);
 
-    let filtrofecha=req.query.Fecha;
-    filtrofecha=String(filtrofecha);
+    // let filtrofecha=req.query.Fecha;
+    // filtrofecha=String(filtrofecha);
 
-    let filtrocaja=req.query.Caja;
-    filtrocaja=String(filtrocaja);
-
-    Banco.find({fecha:filtrofecha,caja:filtrocaja})
+    // let filtrocaja=req.query.Caja;
+    // filtrocaja=String(filtrocaja);
+//fecha:filtrofecha,caja:filtrocaja
+    Banco.find({})
         .skip(desde)
         .limit(limite)
         .exec((err, banco) => {
