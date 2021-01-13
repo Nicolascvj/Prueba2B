@@ -69,7 +69,7 @@ app.delete('/banco/:id', function (req, res) {
     let id = req.params.id;
 
 
-    Banco.findByIdAndUpdate(id, { new: true, runValidators: true, context: 'query' }, (err, bancoDB) => {
+    Banco.findByIdAndDelete(id, (err, bancoDB) => {
         //   { new: true, runValidators: true, context: 'query' }
         if (err) {
             return res.status(400).json({
@@ -89,7 +89,7 @@ app.delete('/banco/:id', function (req, res) {
 
         res.json({
             ok: true,
-            banco: bancoDB
+            bancos: bancoDB
         });
 
     });
