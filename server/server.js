@@ -27,13 +27,11 @@ mongoose.connect(
     }
 );
 
-// mongoose.connect(
-// "mongodb+srv://cocoa-user:YS0MqpLdHzpBHMOl@cluster0.l2gsu.mongodb.net/banco?retryWrites=true&w=majority", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
-//     (err, res) => {
-//         if (err) throw err;
-//         console.log("Base de datos Online!");
-//     }
-// );
+
+
+
+
+
 
 app.listen(process.env.PORT, () => {
     console.log("Escuchando en el puerto: ", process.env.PORT);
