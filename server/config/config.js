@@ -15,7 +15,7 @@ process.env.NODE_ENV=process.env.NODE_ENV || 'dev';
 let urlDB;
 
 if(process.env.NODE_ENV==='dev'){
-    urlDB="mongodb+srv://cocoa-user:x8qOrxBlM4yIjsB3@cluster0.l2gsu.mongodb.net/bancos";
+    urlDB=process.env.MONGO_URI;;
     
     console.log("base de datos mongo");
 
