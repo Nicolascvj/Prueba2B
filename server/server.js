@@ -2,6 +2,7 @@
 
 require('./config/config')
 
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -16,16 +17,16 @@ app.use(bodyParser.json())
 
 app.use(require('./routes/usuario'))
 
-// mongoose.connect(
-//     process.env.URLDB,
-//     { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
+mongoose.connect(
+    process.env.URLDB,
+    { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
 
-//     (err, res) => {
-//         if (err) throw err;
+    (err, res) => {
+        if (err) throw err;
 
-//         console.log('Base de datos ONLINE');
-//     }
-// );
+        console.log('Base de datos ONLINE');
+    }
+);
 
 
 // mongoose.connect(
@@ -35,10 +36,6 @@ app.use(require('./routes/usuario'))
 //         console.log("Base de datos Online!");
 //     }
 // );
-
-
-
-
 
 
 
