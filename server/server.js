@@ -28,13 +28,13 @@ app.use(require('./routes/usuario'))
 // );
 
 
-mongoose.connect(
-    "mongodb+srv://cocoa-user:zeCLBhugnx726afH@cluster0.l2gsu.mongodb.net/bancos?retryWrites=true&w=majority", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
-    (err, res) => {
-        if (err) throw err;
-        console.log("Base de datos Online!");
-    }
-);
+// mongoose.connect(
+//     "mongodb+srv://cocoa-user:zeCLBhugnx726afH@cluster0.l2gsu.mongodb.net/bancos?retryWrites=true&w=majority", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
+//     (err, res) => {
+//         if (err) throw err;
+//         console.log("Base de datos Online!");
+//     }
+// );
 
 
 
